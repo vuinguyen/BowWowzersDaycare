@@ -61,7 +61,10 @@ dogs['Hashbrown'] = {'breed': 'French Bulldog', 'birth_date': '2016-06-01', 'wei
 view_dogs(dogs)
 
 # Modifying the details of a dog
-dogs['Rocky']['favorite_activity'] = 'Chasing'
+# Doing a check first before modifying
+if 'Rocky' in dogs:
+    dogs['Rocky']['favorite_activity'] = 'Chasing'
+# Modify the favorite activity of dogs without doing a check
 dogs['Bella']['favorite_activity'] = 'Fetching'
 dogs['Daisy']['favorite_activity'] = 'Snuggling'
 dogs['Hashbrown']['favorite_activity'] = 'Sleeping'
@@ -72,6 +75,11 @@ remove_dog(dogs, 'Bella')
 
 view_dogs(dogs)
 
+# Checking a dog out of daycare without calling the function
+if 'Rocky' in dogs:
+    del dogs['Rocky']
+
+view_dogs(dogs)
 ######
 # The following is an example of managing dogs in the daycare using arrays
 # and lists instead of dictionaries. This is not the best practice
