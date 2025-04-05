@@ -3,6 +3,23 @@
 
 # Initializing an empty dogs dictionary
 dogs = {}
+dog_names = ['Rocky', 'Bella', 'Daisy', 'Hashbrown']
+
+# Adding keys with no values to the dogs dictionary
+dogs = {'Rocky', 'Bella', 'Daisy', 'Hashbrown'}
+
+# Showing another way to add a dog to the dogs dictionary
+# dogs = {'Rocky'}
+# dogs = {'Rocky' : {'breed': 'Schnoodle', 'birth_date': '2021-11-01', 'weight': 14, 'favorite_activity': None} }
+
+# Showing another way to add a dog to the dogs dictionary
+# formatted different from the above
+dogs = { 'Rocky' : {'breed': 'Schnoodle', 
+                    'birth_date': '2021-11-01', 
+                    'weight': 14, 
+                    'favorite_activity': None}
+        }
+
 
 # Function to view all dogs in the daycare
 def view_dogs(dogs):
@@ -74,6 +91,11 @@ view_dogs(dogs)
 remove_dog(dogs, 'Bella')
 
 view_dogs(dogs)
+
+# print('-------------Printing Just One Dog-------------')
+# details = dogs['Rocky'].values()
+# for detail in details:  
+#     print(detail)
 
 # Checking a dog out of daycare without calling the function
 if 'Rocky' in dogs:
